@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>✨ Number Magical Guess! 💖</title>
+    <link rel="stylesheet" href="style.css">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Chewy&family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+<body>
+    <div class="glitter-overlay"></div> <div class="container">
+        <h1>✨NUMBER MAGICAL GUESS! 💖</h1>
+        <p class="instruction">Aku menyembunyikan **angka rahasia 1-100** di kotak berlian! Semangat yaa! 💖</p>
+
+        <div class="game-card">
+            <div class="input-area">
+                <input type="number" id="guessInput" min="1" max="100" placeholder="Angka rahasia (1-100)">
+                <button id="submitGuess" class="pink-button">KIRIM TEBAKAN!</button>
+            </div>
+            
+            <div id="result" class="message">🤔 Siapakah si jenius penemu angka?</div>
+            
+            <div class="stats-area">
+                <p>💎 Nyawa Tersisa: <span id="guessesLeft">7</span></p>
+                <p>📜 Riwayat Tebakan: <span id="prevGuesses">Kosong</span></p>
+            </div>
+            
+            <button id="resetGame" class="hidden pink-button large-button">RESTART GLAMOUR!</button>
+        </div>
+        
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+xs

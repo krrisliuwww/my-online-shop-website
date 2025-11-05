@@ -1,0 +1,198 @@
+:root {
+    --hot-pink: #FF1493;  /* Hot Pink */
+    --fuchsia-magic: #C71585; /* Fuchsia Dalam */
+    --baby-pink: #FFEDED; /* Pink Pucat */
+    --font-heading: 'Chewy', cursive; /* Lucu dan Bold */
+    --font-body: 'Poppins', sans-serif;
+    --shadow-pop: 0 10px 20px rgba(255, 20, 147, 0.5); /* Bayangan Pink Kuat */
+}
+
+body {
+    font-family: var(--font-body);
+    /* Background gradasi yang cerah dan 'berkilau' */
+    background: linear-gradient(145deg, #FFC0CB 0%, #FFB6C1 50%, #FF69B4 100%); 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    color: #333;
+    overflow: hidden; 
+}
+
+/* Efek Bintang/Glitter Background */
+.glitter-overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    /* Pola yang menyerupai glitter atau pola berlian */
+    background-image: radial-gradient(circle, rgba(255, 255, 255, 0.3) 1px, transparent 1px);
+    background-size: 20px 20px;
+    opacity: 0.8;
+    animation: sparkle 15s infinite alternate;
+}
+
+@keyframes sparkle {
+    from { background-position: 0 0; }
+    to { background-position: 50% 50%; }
+}
+
+.container {
+    background-color: rgba(255, 255, 255, 0.98);
+    padding: 35px 45px;
+    border-radius: 30px;
+    box-shadow: var(--shadow-pop);
+    text-align: center;
+    max-width: 500px;
+    width: 90%;
+    border: 5px solid var(--fuchsia-magic);
+    z-index: 10;
+    transform: rotate(-1deg); /* Sedikit miring untuk kesan tidak klasik */
+    transition: transform 0.3s;
+}
+
+.container:hover {
+    transform: rotate(1deg);
+}
+
+h1 {
+    font-family: var(--font-heading);
+    color: var(--hot-pink);
+    font-size: 3.5em;
+    margin-bottom: 10px;
+    text-shadow: 4px 4px 0px var(--fuchsia-magic);
+    letter-spacing: 2px;
+}
+
+.instruction {
+    color: var(--fuchsia-magic);
+    font-size: 1.15em;
+    margin-bottom: 30px;
+    font-weight: 600;
+}
+
+.game-card {
+    background-color: var(--baby-pink);
+    border-radius: 20px;
+    padding: 25px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.input-area {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 25px;
+}
+
+#guessInput {
+    padding: 15px 20px;
+    border: 3px dashed var(--hot-pink); /* Border dashed yang lucu */
+    border-radius: 12px;
+    flex-grow: 1;
+    font-size: 1.2em;
+    text-align: center;
+    font-weight: 700;
+}
+
+#guessInput:focus {
+    border-style: solid;
+    border-color: var(--fuchsia-magic);
+    outline: none;
+}
+
+.pink-button {
+    background-color: var(--hot-pink);
+    color: white;
+    padding: 15px 25px;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    font-weight: 700;
+    font-size: 1.1em;
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275); /* Animasi 'spring' */
+    box-shadow: 0 4px 0 var(--fuchsia-magic);
+}
+
+.pink-button:hover {
+    background-color: var(--fuchsia-magic);
+    transform: translateY(-5px);
+    box-shadow: 0 8px 0 var(--hot-pink);
+}
+
+.pink-button:active {
+    transform: translateY(0);
+    box-shadow: 0 4px 0 var(--fuchsia-magic);
+}
+
+.message {
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 15px;
+    font-weight: 700;
+    min-height: 20px;
+    font-size: 1.1em;
+    border: 2px solid #EEE;
+    transition: all 0.4s;
+}
+
+/* Animasi Ekspresif */
+@keyframes shake-and-pout {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.05) rotate(1deg); }
+}
+
+.feedback-low {
+    background-color: #F8D7DA;
+    color: #721c24;
+    border-color: #F5C6CB;
+    animation: shake-and-pout 0.4s;
+}
+
+.feedback-high {
+    background-color: #FFE5B4; /* Peach/Pink-Orange Pucat */
+    color: #856404;
+    border-color: #FFDDAA;
+    animation: shake-and-pout 0.4s;
+}
+
+.feedback-win {
+    background-color: #D4EDDA;
+    color: #155724;
+    font-size: 1.3em;
+    border-color: #C3E6CB;
+    animation: pop 0.5s;
+}
+
+.feedback-lose {
+    background-color: #FFC0CB; /* Pink Lebih Terang */
+    color: #AD1457;
+    font-size: 1.3em;
+    border-color: #FF8FBC;
+    animation: shake-and-pout 0.6s;
+}
+
+.stats-area {
+    text-align: center;
+    padding: 15px 0;
+    border-top: 2px dotted var(--hot-pink);
+    margin-top: 15px;
+    color: var(--fuchsia-magic);
+    font-weight: 600;
+}
+
+.stats-area span {
+    color: var(--hot-pink);
+    font-weight: 800;
+    font-size: 1.2em;
+}
+
+.large-button {
+    font-size: 1.3em !important;
+    padding: 15px 30px;
+}
+
+.hidden {
+    display: none;
+}
+    
+
